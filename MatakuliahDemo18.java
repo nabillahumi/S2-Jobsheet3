@@ -1,38 +1,38 @@
 import java.util.Scanner;
 public class MatakuliahDemo18 {
-
+   
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Matakuliah18[] arrayOfMatakuliah = new Matakuliah18[3];  // Array untuk menyimpan data
-        String kode, nama;
-        int sks, jumlahJam;
 
-        // Loop untuk input data matakuliah
-        for (int i = 0; i < 3; i++) {
-            System.out.println("Masukkan Data Matakuliah ke-" + (i + 1));
-            System.out.print("Kode       : ");
-            kode = sc.nextLine();
-            System.out.print("Nama       : ");
-            nama = sc.nextLine();
-            System.out.print("Sks        : ");
-            sks = Integer.parseInt(sc.nextLine());  // Langsung parsing tanpa variabel dummy
-            System.out.print("Jumlah Jam : ");
-            jumlahJam = Integer.parseInt(sc.nextLine());
-            System.out.println("---------------------------------------");
+       //deklarasi array
+       Matakuliah18[] arrayOfMatkuliah = new Matakuliah18[3];
 
-            // Inisialisasi objek dalam array
-            arrayOfMatakuliah[i] = new Matakuliah18(kode, nama, sks, jumlahJam);
-        }
-        // Loop untuk menampilkan data matakuliah yang telah diinput
-        System.out.println("\n=== Data Matakuliah yang Telah Diinput ===");
-        for (int i = 0; i < 3; i++) { 
-            System.out.println("Data Matakuliah ke-" + (i + 1));
-            System.out.println("Kode        : " + arrayOfMatakuliah[i].kode);
-            System.out.println("Nama        : " + arrayOfMatakuliah[i].nama);
-            System.out.println("Sks         : " + arrayOfMatakuliah[i].sks);
-            System.out.println("Jumlah Jam  : " + arrayOfMatakuliah[i].jumlahJam);
-            System.out.println("---------------------------------");
+       //looping untuk masukkan data matkul
+       for (int i = 0; i < arrayOfMatkuliah.length; i++) {
+           //buat object baru
+           arrayOfMatkuliah[i] = new Matakuliah18();
+
+           System.out.println("Masukkan nama mata kuliah ke-" + (i+1));
+           System.out.print("Kode\t : ");
+           String kode = sc.nextLine();
+           System.out.print("Nama\t : ");
+           String nama = sc.nextLine();
+           System.out.print("SKS\t : ");
+           int sks = sc.nextInt();
+           System.out.print("Jam\t : ");
+           int jam = sc.nextInt();
+           sc.nextLine();
+           System.out.println("------------------------------------");
+
+           arrayOfMatkuliah[i].tambahData(kode, nama, sks, jam);
+         }
+        //looping untuk menampilkan output
+        for (int i = 0; i < arrayOfMatkuliah.length; i++) {
+            System.out.println("Data Mata Kuliah ke-" + (i+1));
+            arrayOfMatkuliah[i].cetakInfo();
         }
     }
 }
+
+
 
