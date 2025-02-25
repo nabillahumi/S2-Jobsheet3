@@ -1,11 +1,11 @@
-public class Dosen {
+public class Dosen18 {
     String kode;
     String nama;
     String jenisKelamin;
     int usia;
 
-    // Konstruktor untuk menginisialisasi atribut dosen
-    public Dosen(String kode, String nama, String jenisKelamin, int usia) {
+    // konstruktor untuk menginisialisasi atribut dosen
+    public Dosen18(String kode, String nama, String jenisKelamin, int usia) {
         this.kode = kode;
         this.nama = nama;
         this.jenisKelamin = jenisKelamin;
@@ -21,5 +21,4 @@ public class Dosen {
         System.out.println("Usia   : " + usia);
         System.out.println("----------------------------");
     }
-
 }
