@@ -4,11 +4,16 @@ public class MatakuliahDemo18 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-       //deklarasi array
-       Matakuliah18[] arrayOfMatkuliah = new Matakuliah18[3];
+        //input banyak mata kuliah
+        System.out.print("Input jumlah matkul : ");
+        int jumlahMatkul = sc.nextInt();
+        sc.nextLine();
 
-       //looping untuk masukkan data matkul
-       for (int i = 0; i < arrayOfMatkuliah.length; i++) {
+        //deklarasi array
+        Matakuliah18[] arrayOfMatkuliah = new Matakuliah18[jumlahMatkul];
+
+        //looping untuk masukkan data matkul
+        for (int i = 0; i < arrayOfMatkuliah.length; i++) {
            //buat object baru
            arrayOfMatkuliah[i] = new Matakuliah18();
 
